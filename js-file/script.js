@@ -18,17 +18,17 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
    
     
-    if( rentCostText >= 0 && foodCostText >= 0 &&  clothCostText >= 0){
-        totalExpense.innerText =totalExpenseCost;
+    if( rentCost < 0 || foodCost < 0 || clothCost <0){
+        const negative =document.getElementById('notify-negative');
+        
+        
+        negative.style.display='block';
         
 
     }
     else{
-        const notifyPositiveall =document.getElementById('notify-negativeall');
-        
-        notifyPositiveall.style.display='block';
-        
-       
+        totalExpense.innerText =totalExpenseCost;
+
 
     }
     // foodCost.value='';
@@ -61,7 +61,6 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
     else if(totalExpenseCost>totalIncome){
         nortifyPositve.style.display='none';
-        
 
         notifyError.style.display='block';
 
@@ -101,13 +100,24 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const savingAmountText =savingAmount.innerText;
     const savintAmountTotal =parseFloat(savingAmountText);
     // console.log(savintAmountTotal);
-    savingAmount.innerText=percentSave;
 
-
-
+    
     const totalBalance =document.getElementById('total-balance');
     const balanceText =totalBalance.innerText;
     const balance=parseFloat(balanceText);
+
+    if(percentSave>balance){
+        const notEnoughMoney =document.getElementById('notify-fail2');
+        notEnoughMoney.style.display='block';
+
+    }
+    else{
+        savingAmount.innerText=percentSave;
+
+    }
+
+
+
     // console.log(balance);
 
     const remainingAmountFinal = balance-percentSave;
