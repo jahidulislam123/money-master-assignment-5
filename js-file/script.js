@@ -17,7 +17,7 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     const expenses =parseFloat(expensesText);
 
    
-    
+    // error handeling
     if( rentCost < 0 || foodCost < 0 || clothCost <0){
         const negative =document.getElementById('notify-negative');
         
@@ -31,10 +31,6 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
 
     }
-    // foodCost.value='';
-    // rentCost.value='';
-    // clothCost.value='';
-
 
 
 
@@ -131,9 +127,4 @@ document.getElementById('save-btn').addEventListener('click',function(){
     remainingAmount.innerText=remainingAmountFinal;
     
 
-
-    
-    
-    
-    
 });
