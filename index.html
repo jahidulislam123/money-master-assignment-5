@@ -36,46 +36,24 @@
               <!-- right side form added -->
               <div class="col-sm-12 col-lg-6">
                 <div class="p-3 border bg-success p-2  bg-opacity-50">
-                    <form>
-                        <div class="mb-3 text-center">
-                          <h1 class="text-center">Income </h1>
-                          <label  for="">Income</label>
-                          <input id="income-input" type="text">
-                        </div> <br>
-                        <div class="mb-3 text-center">
-                          <h1 class="text-center">Expense </h1>
-                          <label for="">Food</label>
-                          <input type="text"> <br> <br>
-                          <label for="">Rent </label>
-                          <input type="text"><br> <br>
-                          <label for="">Cloths</label>
-                          <input type="text"> <br> <br>
-                          <div id="calculate-btn" class="text-center"><button   type="submit" class="btn btn-primary">Calculate</button></div>
-                        </div> <br>
-                        
-                        <div style="display: inline-flex;" class="mb-3 ">
-                         <h3>Total Expense :</h3> <h3  >0000</h3> <br>
-                        </div>
-                        <div style="display: inline-flex;" class="mb-3 ">
-                          <h3>Balance  :</h3> <h3 id="total-balance" >0000</h3>
-                         
-                         
-                        </div>
-                        <div style="display: inline-flex;" class="mb-3">
-                          <h3>Save  :</h3> <input type="text"><span> &nbsp &nbsp</span> <span>% &nbsp &nbsp</span>
-                            <button type="submit" class="btn btn-primary">Save</button>
-                         
-                         
-                        </div> <br> <br>
-                        <div style="display: inline-flex;" class="mb-3 ">
-                          <h3>Saving Amount   :</h3> <h3 >0000</h3> <br>
-                        </div>
-                        <div style="display: inline-flex;" class="mb-3 ">
-                          <h3>Remaining Balance   :</h3> <h3 >0000</h3>
-                                                   
-                         
-                        </div><br><br><br>
+                    <form class="text-center">
+                        <h3>Income</h3>
+                        <label>Income</label> <input id="income-input" type="text">
+                        <h3>Expenses</h3>
+                        <div class="mb-3"><label >Food</label> <input id="food" type="text"> </div>
+                        <div class="mb-3"><label >Rent</label> <input id="rent" type="text"> </div>
+                        <div class="mb-3"><label >Cloth</label> <input id="cloth" type="text"></div>
+                        <button id="calculate-btn" type="button" class="btn btn-primary">Calculate</button>
                        
+                        <div><h3>Total Expense</h3> <h3 id="total-expense">0000</h3></div>
+                        <div> <h3 >Balance </h3><h3 id="total-balance">0000</h3> </div>
+
+                        <div><label for="">Save</label> <input type="text"> <span>%</span> <button type="button" class="btn btn-primary">save</button>
+                        </div>
+
+                        <div><h3 for="">Saving Amount </h3> <h4>0000</h4></div>
+
+                        <div><h3>Remaining Balance </h3> <h3>0000</h3></div>
                       </form>
                 </div>
               </div>
