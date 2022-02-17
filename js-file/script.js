@@ -16,7 +16,21 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     const expensesText =totalExpense.innerText;
     const expenses =parseFloat(expensesText);
 
-    totalExpense.innerText =totalExpenseCost;
+   
+    
+    if( rentCostText >= 0 && foodCostText >= 0 &&  clothCostText >= 0){
+        totalExpense.innerText =totalExpenseCost;
+        
+
+    }
+    else{
+        const notifyPositiveall =document.getElementById('notify-negativeall');
+        
+        notifyPositiveall.style.display='block';
+        
+       
+
+    }
     // foodCost.value='';
     // rentCost.value='';
     // clothCost.value='';
@@ -35,8 +49,28 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     const balance=parseFloat(balanceText)
 
     // console.log(balance);
+    const nortifyPositve =document.getElementById('notify-negative');
+    const notifyError =document.getElementById('notify-fail');
+    if( totalIncome <0){
+        
+        nortifyPositve.style.display='block';
+        notifyError.style.display='none';
+        
 
+    }
+
+    else if(totalExpenseCost>totalIncome){
+        nortifyPositve.style.display='none';
+        
+
+        notifyError.style.display='block';
+
+    }
+    
+
+   else{
     totalBalance.innerText=totalIncome-totalExpenseCost;
+   }
 
     // income.value='';
     
