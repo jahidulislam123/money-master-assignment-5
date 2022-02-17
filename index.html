@@ -25,9 +25,9 @@
         <div class="container px-4">
             <div class="row gx-5">
                 <!-- left side image added -->
-              <div class="col-sm-12 col-lg-6">
-               <div class="p-3 border bg-light">
-                <img src="images/photo-1623911380012-0b6db3fcad54.jpg" class="img-fluid" alt="...">
+              <div class="col-sm-12  col-lg-6">
+               <div class="p-0 ">
+                <img src="images/photo-1623911380012-0b6db3fcad54.jpg" class="img-fluid" >
                </div>
               </div>
               <!-- left side image end  -->
@@ -35,22 +35,47 @@
 
               <!-- right side form added -->
               <div class="col-sm-12 col-lg-6">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border bg-success p-2  bg-opacity-50">
                     <form>
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <div class="mb-3 text-center">
+                          <h1 class="text-center">Income </h1>
+                          <label  for="">Income</label>
+                          <input id="income-input" type="text">
+                        </div> <br>
+                        <div class="mb-3 text-center">
+                          <h1 class="text-center">Expense </h1>
+                          <label for="">Food</label>
+                          <input type="text"> <br> <br>
+                          <label for="">Rent </label>
+                          <input type="text"><br> <br>
+                          <label for="">Cloths</label>
+                          <input type="text"> <br> <br>
+                          <div id="calculate-btn" class="text-center"><button   type="submit" class="btn btn-primary">Calculate</button></div>
+                        </div> <br>
+                        
+                        <div style="display: inline-flex;" class="mb-3 ">
+                         <h3>Total Expense :</h3> <h3  >0000</h3> <br>
                         </div>
-                        <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        <div style="display: inline-flex;" class="mb-3 ">
+                          <h3>Balance  :</h3> <h3 id="total-balance" >0000</h3>
+                         
+                         
                         </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div style="display: inline-flex;" class="mb-3">
+                          <h3>Save  :</h3> <input type="text"><span> &nbsp &nbsp</span> <span>% &nbsp &nbsp</span>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                         
+                         
+                        </div> <br> <br>
+                        <div style="display: inline-flex;" class="mb-3 ">
+                          <h3>Saving Amount   :</h3> <h3 >0000</h3> <br>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div style="display: inline-flex;" class="mb-3 ">
+                          <h3>Remaining Balance   :</h3> <h3 >0000</h3>
+                                                   
+                         
+                        </div><br><br><br>
+                       
                       </form>
                 </div>
               </div>
